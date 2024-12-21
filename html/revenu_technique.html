@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/revenu_technique.js"></script>
+    <script src="../js/fonctions_communes.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse des revenus en fonction des compétences techniques</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="manuscrite">
+        <h3>R5.c.04 - Visualisation d’un jeu de données issu de stackOverflow</h3>
+        <h3>Tristan Patout & Virgile Caujolle</h3>
+    </div>
+    <!-- HEADER -->
+    <div id="headerContainer">
+        <!-- Le contenu de header.html est placé ici -->
+        <script>
+            $(document).ready(function () {$("#headerContainer").load("header.html", function () {var script = document.createElement('script');script.src = '../js/header.js';document.body.appendChild(script);});});
+        </script>
+        <script src="../js/check_radio.js"></script>
+    </div>
+    
+    <h1>Analyse des revenus en fonction des compétences techniques</h1>
+
+    <div class="params">
+        <div>
+            <label for="continent">Continent :</label>
+            <select id="continent">
+                <option value="WE">Europe</option>
+                <option value="NA">Amérique du Nord</option>
+            </select>
+        </div>
+        <div>
+            <label for="pays">Pays :</label>
+            <select id="pays">
+                <option value="tous">Tous les pays</option>
+            </select>
+        </div>
+        <div>
+            <label for="devise">Devise :</label>
+            <select id="devise">
+                <option value="EUR">Euro</option>
+                <!-- Add other currencies as options here -->
+            </select>
+        </div>
+        <div>
+            <label for="experience">Années d'expérience :</label>
+            <select id="experience">
+                <option value="0">Toutes</option>
+                <option value="1">1 an</option>
+                <option value="2">2 ans</option>
+                <option value="3">3 ans</option>
+                <option value="4">4 ans</option>
+                <option value="5-10">5-10 ans</option>
+                <option value="10+">10 ans et plus</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <h2>Revenus Moyen en fonction des Plateformes Cloud</h2>
+        <canvas id="graphique-plateformes-cloud"></canvas>
+    </div>
+
+    <div>
+        <h2>Revenus Moyen en fonction des Frameworks de Développement Web</h2>
+        <canvas id="graphique-frameworks-web"></canvas>
+    </div>
+
+</body>
+
+</html>

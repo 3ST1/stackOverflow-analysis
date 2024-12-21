@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Page d'Accueil</title>
+</head>
+<body class="corps">
+    <div class="manuscrite">
+        <h3>R5.c.04 - Visualisation d’un jeu de données issu de stackOverflow</h3>
+        <h3>Tristan Patout & Virgile Caujolle</h3>
+    </div>
+    <!-- HEADER -->
+    <div id="headerContainer">
+        <!-- Le contenu de header.html est placé ici -->
+        <script>
+            $(document).ready(function () {$("#headerContainer").load("header.html", function () {var script = document.createElement('script');script.src = '../js/header.js';document.body.appendChild(script);});});
+        </script>
+        <script src="../js/check_radio.js"></script>
+    </div>
+    
+    <h1>Visualisation d’un jeu de données issu de Stack Overflow </h1>
+
+    <div class="conteneur-bouton">
+        <a href="revenu_technique.html" class="lien-bouton">
+            <div class="bouton">
+                <div class="contenu-bouton">
+                    <p class="texte-bouton">Revenus en fonction <br> des compétences techniques</p>
+                    <img src="../data/revenu_technique.jpg" alt="Image 1" class="image-bouton">
+                </div>
+            </div>
+        </a>
+
+        <a href="revenu_experience.html" class="lien-bouton">
+            <div class="bouton">
+                <div class="contenu-bouton">
+                    <p class="texte-bouton">Revenus en fonction <br> de l'expérience</p>
+                    <img src="../data/revenu_experience.jpg" alt="Image 2" class="image-bouton">
+                </div>
+            </div>
+        </a>
+
+        <a href="top_technologies.html" class="lien-bouton">
+            <div class="bouton">
+                <div class="contenu-bouton">
+                    <p class="texte-bouton">Top Technologies</p>
+                    <img src="../data/top_technologies.jpg" alt="Image 3" class="image-bouton">
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

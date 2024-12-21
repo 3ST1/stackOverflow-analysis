@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --light_color: #f8f9fa;
+    --dark_color: #212529;
+    --color1: #ff7e29;
+    --color2: #0077cc;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light_color);
+    color: var(--dark_color);
+    margin: 0;
+    padding: 2vh;
+    background-image: url("../data/fond.jpg");
+}
+
+h1 {
+    color: var(--color1);
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 5vh;
+}
+
+h3{
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    margin: 1vw;
+}
+
+.manuscrite {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    margin: auto;
+}
+
+div {
+    margin: 2vh;
+}
+
+.params {
+    position: sticky;
+    top:3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--light_color);
+    width: fit-content;
+    border-radius: 1.2vw;
+    border: 0.4vh solid var(--color1);
+    box-shadow: 1.5vw 1.5vw 1.5vw rgba(0, 0, 0, 0.25);
+
+}
+
+.params div{
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--light_color);
+    padding: 2vw;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1vw;
+}
+
+label {
+    display: block;
+    margin: 0 0 0.2vw 0.6vw;
+    color: var(--dark_color);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+nav label {
+    font-family: 'Lucida Console', monospace;
+    font-size: 2vh;
+    padding: 1vw;
+    margin-right: 0.5vw;
+    cursor: pointer;
+    border: 0.2vw solid var(--color1);
+    background-color: var(--light_color);
+    border-radius: 2vw;
+}
+
+input[type="radio"]:checked+label {
+    background-color: var(--light_color);
+    color: var(--color2);
+}
+
+input[type="radio"]:hover+label {
+    background-color: var(--color1);
+    color: var(--light_color);
+    border: 0.1vw solid var(--light_color);
+}
+
+select {
+    width: 20vw;
+    max-width: 20vw;
+    padding: 0.5vw;
+    border: 0.1vw solid var(--color2);
+    border-radius: 0.6vw;
+    box-sizing: border-box;
+    background-color: var(--light_color);
+    color: var(--dark_color);
+}
+
+canvas {
+    display: block;
+    margin: auto;
+    width: 80vw;
+    height: 60vh;
+    max-height: 60vh;
+    min-height: 60vh;    
+    border: 0.3vw solid var(--color1);
+    border-radius: 1.2vw;
+    box-shadow: 1.5vw 1.5vw 1.5vw rgba(0, 0, 0, 0.25);
+    background-color: var(--light_color);
+    color: var(--dark_color);
+    padding:2vh;
+}
+
+#headerContainer {
+    margin: 0;
+}
+
+.corps {   
+    font-family: 'Lucida Console', monospace;
+    background-color: var(--light_color);
+    color: var(--dark_color);
+    margin: 0;
+    padding: 0;
+}
+
+.entete h1 {
+    font-family: 'Lucida Console', monospace;
+    font-weight: 800;
+    color: var(--color1);
+    text-align: center;
+    margin:0;
+}
+
+.conteneur-bouton {
+    display: flex;
+    justify-content: center;
+    margin: 2vh auto;
+    width: 84vw;
+}
+
+.lien-bouton {
+    text-decoration: none;
+    width: 100%;
+}
+
+.bouton {
+    font-family: 'Lucida Console', monospace;
+    margin: -1vh;
+    text-align: center;
+    background-color: transparent;
+    color: var(--light_color);
+    border-radius: 2vw;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.8s ease-out;
+    flex: 1;
+    position: relative;
+}
+
+.contenu-bouton {
+    position: relative;
+}
+
+.texte-bouton {
+    font-family: 'Lucida Console', monospace;
+    font-weight: 600;
+    position: absolute;
+    color: var(--color1);
+    top: 4%;
+    left: 6%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1vw;
+    margin: 0;
+    white-space: pre-line;
+    text-align: left;
+    font-family: inherit;
+    animation: slideIn 0.8s ease-out;
+}
+
+.image-bouton {
+    width: 100%;
+    height: auto;
+    border-radius: 2vw;
+    margin-bottom: 5vh;
+}
+
+.bouton:hover {
+    transform: scale(1.03);
+    animation: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.texte-bouton p {
+    font-family: 'Lucida Console', monospace;
+    color: var(--color1);
+    text-decoration: none;
+    transition: color 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: slideIn 0.8s ease-out;
+}
+
+.texte-bouton p:hover {
+    color: var(--dark_color);
+}
+
+@media screen and (max-width: 768px) {
+    .params {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    nav label {
+        margin-bottom: 1vw;
+        font-size: 1vh;
+    }
+
+    select {
+        width: 90%;
+    }
+
+    .conteneur-bouton {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bouton {
+        width: 90%;
+        margin-bottom: 2vh;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/top_technologies.js"></script>
+    <script src="../js/fonctions_communes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse de l'utilisation des technologies</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="manuscrite">
+        <h3>R5.c.04 - Visualisation d’un jeu de données issu de stackOverflow</h3>
+        <h3>Tristan Patout & Virgile Caujolle</h3>
+    </div>
+    <!-- HEADER -->
+    <div id="headerContainer">
+        <!-- Le contenu de header.html est placé ici -->
+        <script>
+            $(document).ready(function () {$("#headerContainer").load("header.html", function () {var script = document.createElement('script');script.src = '../js/header.js';document.body.appendChild(script);});});
+        </script>
+        <script src="../js/check_radio.js"></script>
+    </div>
+
+    <h1>Principales Technologies</h1>
+
+    <div class="params">
+        <div>
+            <label for="continent">Continent :</label>
+            <select id="continent"></select>
+        </div>
+
+        <div id="typeMetierContainer">
+            <label for="typeMetier">Métier :</label>
+            <select id="typeMetier">
+                <option value="tous">Tous les métiers</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="nbrTop">Top :</label>
+            <select id="nbrTop">
+                <option value="5">Top 5</option>
+                <option value="6">Top 6</option>
+                <option value="7">Top 7</option>
+                <option value="8">Top 8</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="chartContainer">
+        <h2>Répartition des Systèmes d'exploitation pour <span class="selectedtypeMetier">Tous les métiers</span></h2>
+        <canvas id="osChart" width="200" height="100"></canvas>
+        <h2>Répartition des Outils de Communication pour <span class="selectedtypeMetier">Tous les métiers</span></h2>
+        <canvas id="communicationChart" width="200" height="100"></canvas>
+    </div>
+</body>
+
+</html>

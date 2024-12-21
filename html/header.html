@@ -1,0 +1,91 @@
+<header>
+    <nav>
+        <div class="gravityButton gb">
+            <button>
+                <input type="radio" id="menu1" name="menu" data-page="accueil.html" onclick="window.location.href='accueil.html'">
+                <label for="menu1">Accueil</label>
+            </button>
+        </div>
+
+        <div class="gravityButton gb">
+          <button>
+              <input type="radio" id="menu2" name="menu" data-page="revenu_experience.html" onclick="window.location.href='revenu_experience.html'">
+              <label for="menu2">Revenus Expérience</label>
+          </button>
+          </div>
+    
+        <div class="gravityButton gb">
+            <button>
+                <input type="radio" id="menu3" name="menu" data-page="revenu_technique.html" onclick="window.location.href='revenu_technique.html'">
+                <label for="menu3">Revenus Technique</label>
+            </button>
+            </div>
+    
+    
+            <div class="gravityButton gb">
+            <button>
+                <input type="radio" id="menu4" name="menu" data-page="top_technologies.html" onclick="window.location.href='top_technologies.html'">
+                <label for="menu4">Top Technologies</label>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<style>
+
+header {
+    background-color: transparent;
+    height: 20vh;
+    overflow: hidden;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .gravityButton {
+    display: grid;
+    place-items: center;
+    width: 100%; /* à baisser si trop abusé  */
+    aspect-ratio: 1;
+  }
+  
+  .gravityButton > button {
+    font: inherit;
+    width: 20vw;
+    aspect-ratio: 1;
+    background: none;
+    border-radius: 50%;
+    transform: translate(var(--tx, 0), var(--ty, 0));
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    border: none;
+  }
+  
+  .gravityButton > input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .gravityButton label {
+    box-shadow: 0.5vw 0.5vw 0.5vw rgba(0, 0, 0, 0.25);
+  }
+  
+  .gb{
+    margin-right: -30vw; /* à baisser si trop abusé*/
+    margin-left: -30vw; /* à baisser si trop abusé*/
+  }
+  
+  .gravityButton > input:focus-visible {
+    outline-offset: 2px;
+  }
+  
+  .buttonIcon {
+    width: 50%;
+    transition: fill 0.3s;
+  }
+  
+</style>
